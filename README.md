@@ -37,14 +37,39 @@ lib/
 ## Screenshots
 
 ### Main Application Interface
-![Application Screenshot](assets/railse.jpg)
+![Application Screenshot](assets/railse_thumb.jpg)
+
+*Click for full resolution: [Full Size Image](assets/railse.jpg)*
 
 ## Video Demonstration
 
-Watch the application in action:
-[![Application Demo](assets/railse.jpg)](assets/railse_video.mp4)
+**Note**: The video file is large (~13MB) and may not play directly in GitHub. Here are several options:
 
-*Click the image above to view the video demonstration*
+### Option 1: Download and View Locally
+- Download `assets/railse_video.mp4` to view the application demonstration
+- File size: ~13MB
+
+### Option 2: Create Optimized Video (Recommended)
+Run these commands to create a smaller, web-friendly version:
+
+```bash
+# Create a smaller MP4 (compressed, lower resolution)
+ffmpeg -i assets/railse_video.mp4 -vf "scale=640:-1" -c:v libx264 -crf 28 assets/railse_video_optimized.mp4
+
+# Create a GIF for inline viewing (smaller file)
+ffmpeg -i assets/railse_video.mp4 -vf "fps=10,scale=480:-1" assets/demo.gif
+```
+
+### Option 3: External Hosting
+For better viewing experience, upload to:
+- **YouTube** (recommended for long videos)
+- **GitHub Releases** (for project releases)
+- **Google Drive** (with public sharing)
+
+### Option 4: Use GitHub's Video Support
+GitHub supports video files up to 100MB. You can:
+1. Upload the video directly to the repository
+2. Reference it in markdown: `![Video Demo](assets/railse_video.mp4)`
 
 ## Getting Started
 
